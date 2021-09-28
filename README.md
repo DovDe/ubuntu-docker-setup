@@ -71,4 +71,32 @@ EOF
  sudo apt-get install -y docker-ce-rootless-extras
  ```
  
+ ## Instal microk8s with snap 
+ 
+ - If snap is not installed install snap
+ ```
+sudo apt install snapd
+ ```
+ - install microk8s
+```
+sudo snap install microk8s --classic
+```
+- add user to the microk8s group
+```
+sudo usermod -a -G microk8s <user>
+sudo chown -f -R <user> ~/.kube
+```
+- setup alias for kubectl command
+```
+echo "alias kubectl='microk8s.kubectl'" >> ~/.bashrc
+```
+
+  
+
+ 
+ 
+ 
+ 
+ 
+ 
  
