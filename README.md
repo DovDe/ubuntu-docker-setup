@@ -95,6 +95,34 @@ echo "alias kubectl='microk8s.kubectl'" >> ~/.bashrc
 
  
  
+## Terraform Installation
+This is taken diectly from the HashiCorp documentation
+
+Update the system
+ ```
+ sudo apt-get update && sudo apt-get install -y gnupg software-properties-common curl
+ ```
+ 
+ 
+ Add the HashiCorp GPGKey
+```
+curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+```
+ 
+ Add the official HashiCorp Linux repository
+ ```
+ sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+ ```
+ 
+ Update to add the repository, and install the Terraform CLI
+ ```
+ sudo apt-get update && sudo apt-get install terraform
+ ```
+ 
+ 
+ 
+ 
+ 
  
  
  
